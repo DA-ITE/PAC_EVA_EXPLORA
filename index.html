@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Explora y profundiza | SISE</title>
+
+<style>
+
+#sise-explora{
+
+  --red:#FF0E49;
+  --red-dark:#D9003E;
+  --dark:#241F21;
+  --dark2:#30282B;
+  --wine:#6B1E36;
+  --soft:#FFF1F5;
+  --border:#E7E1E3;
+  --paper:#F8F6F7;
+  --text:#241F21;
+  --muted:#625A5D;
+  --white:#FFFFFF;
+
+  width:100%;
+  max-width:1120px;
+  margin:0 auto;
+
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.5;
+}
+
+#sise-explora *,
+#sise-explora *::before,
+#sise-explora *::after{
+  box-sizing:border-box;
+}
+
+
+/* ======================================================
+   HERO
+====================================================== */
+
+#sise-explora .hero{
+
+  position:relative;
+  overflow:hidden;
+
+  padding:40px;
+
+  border-radius:14px;
+
+  color:#FFFFFF;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark) 0%,
+      var(--dark2) 58%,
+      var(--wine) 140%
+    );
+}
+
+#sise-explora .hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:290px;
+  height:290px;
+
+  right:-95px;
+  top:-135px;
+
+  border:2px solid rgba(255,255,255,.12);
+
+  border-radius:50%;
+}
+
+#sise-explora .hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:170px;
+  height:170px;
+
+  right:80px;
+  bottom:-125px;
+
+  border:28px solid rgba(255,14,73,.14);
+
+  border-radius:50%;
+}
+
+#sise-explora .hero-content{
+
+  position:relative;
+  z-index:2;
+
+  max-width:850px;
+}
+
+#sise-explora .badge{
+
+  display:inline-block;
+
+  margin-bottom:13px;
+
+  padding:7px 12px;
+
+  border-radius:999px;
+
+  background:var(--red);
+
+  color:#FFFFFF;
+
+  font-size:12px;
+  font-weight:900;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+#sise-explora .hero h1{
+
+  margin:0;
+
+  color:#FFFFFF;
+
+  font-size:clamp(38px,6vw,58px);
+
+  line-height:1;
+
+  font-weight:900;
+}
+
+#sise-explora .hero h1 span{
+  color:var(--red);
+}
+
+#sise-explora .hero p{
+
+  max-width:800px;
+
+  margin:16px 0 0;
+
+  color:#F4ECEF;
+
+  font-size:16px;
+
+  line-height:1.7;
+}
+
+
+/* ======================================================
+   INTRO
+====================================================== */
+
+#sise-explora .intro{
+
+  display:flex;
+
+  gap:13px;
+
+  align-items:flex-start;
+
+  margin:20px 0 28px;
+
+  padding:18px 20px;
+
+  border:1px solid #F7D4E0;
+
+  border-left:6px solid var(--red);
+
+  border-radius:10px;
+
+  background:var(--soft);
+}
+
+#sise-explora .intro-icon{
+
+  display:flex;
+
+  width:38px;
+  height:38px;
+
+  flex:0 0 38px;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--red);
+
+  color:#FFFFFF;
+
+  font-size:15px;
+  font-weight:900;
+}
+
+#sise-explora .intro strong{
+
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--red);
+
+  font-size:16px;
+}
+
+#sise-explora .intro p{
+
+  margin:0;
+
+  color:#514A4D;
+
+  font-size:14.5px;
+
+  line-height:1.6;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+#sise-explora .section-heading{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+  gap:16px;
+
+  margin-bottom:18px;
+}
+
+#sise-explora .section-label{
+
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--red);
+
+  font-size:12px;
+  font-weight:900;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+#sise-explora .section-heading h2{
+
+  margin:0;
+
+  color:var(--dark);
+
+  font-size:32px;
+
+  line-height:1.1;
+}
+
+#sise-explora .counter{
+
+  padding:7px 12px;
+
+  border-radius:999px;
+
+  background:var(--paper);
+
+  color:var(--dark);
+
+  font-size:13px;
+
+  font-weight:800;
+
+  white-space:nowrap;
+}
+
+
+/* ======================================================
+   GRID
+====================================================== */
+
+#sise-explora .grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
+
+  gap:20px;
+}
+
+
+/* ======================================================
+   CARD
+====================================================== */
+
+#sise-explora .card{
+
+  display:flex;
+
+  min-width:0;
+
+  flex-direction:column;
+
+  overflow:hidden;
+
+  border:1px solid var(--border);
+
+  border-radius:14px;
+
+  background:#FFFFFF;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+#sise-explora .card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:#F6C4D3;
+
+  box-shadow:
+    0 14px 28px
+    rgba(36,31,33,.09);
+}
+
+
+/* ======================================================
+   VISUAL
+====================================================== */
+
+#sise-explora .visual{
+
+  position:relative;
+
+  display:flex;
+
+  min-height:150px;
+
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #241F21 0%,
+      #3D3034 65%,
+      #74193A 150%
+    );
+}
+
+#sise-explora .visual::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:160px;
+  height:160px;
+
+  top:-70px;
+  right:-50px;
+
+  border:19px solid rgba(255,14,73,.15);
+
+  border-radius:50%;
+}
+
+#sise-explora .visual::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:11px;
+
+  right:-45px;
+  bottom:25px;
+
+  background:var(--red);
+
+  transform:rotate(-9deg);
+}
+
+#sise-explora .resource-number{
+
+  position:absolute;
+
+  top:14px;
+  left:14px;
+
+  z-index:2;
+
+  padding:6px 9px;
+
+  border-radius:5px;
+
+  background:rgba(36,31,33,.86);
+
+  color:#FFFFFF;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.06em;
+
+  text-transform:uppercase;
+}
+
+#sise-explora .icon{
+
+  position:relative;
+
+  z-index:2;
+
+  display:flex;
+
+  width:74px;
+  height:74px;
+
+  align-items:center;
+  justify-content:center;
+
+  border:2px solid rgba(255,255,255,.28);
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.08);
+
+  color:#FFFFFF;
+
+  font-size:25px;
+
+  font-weight:900;
+}
+
+
+/* ======================================================
+   BODY
+====================================================== */
+
+#sise-explora .card-body{
+
+  display:flex;
+
+  height:100%;
+
+  flex-direction:column;
+
+  padding:22px;
+}
+
+#sise-explora .type{
+
+  display:inline-flex;
+
+  width:max-content;
+
+  max-width:100%;
+
+  margin-bottom:10px;
+
+  padding:5px 9px;
+
+  border-radius:5px;
+
+  background:var(--soft);
+
+  color:var(--red);
+
+  font-size:11px;
+  font-weight:900;
+
+  letter-spacing:.07em;
+
+  text-transform:uppercase;
+}
+
+#sise-explora .card h3{
+
+  margin:0 0 9px;
+
+  color:var(--dark);
+
+  font-size:22px;
+
+  line-height:1.15;
+}
+
+#sise-explora .description{
+
+  margin:0 0 17px;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  line-height:1.65;
+}
+
+#sise-explora .tags{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+  margin:auto 0 18px;
+}
+
+#sise-explora .tag{
+
+  padding:6px 8px;
+
+  border-radius:5px;
+
+  background:var(--paper);
+
+  color:#575052;
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+
+/* ======================================================
+   BOTÓN
+====================================================== */
+
+#sise-explora .file-btn{
+
+  display:flex;
+
+  width:100%;
+
+  min-height:48px;
+
+  align-items:center;
+  justify-content:space-between;
+
+  gap:10px;
+
+  padding:12px 14px;
+
+  border-radius:7px;
+
+  background:var(--red);
+
+  color:#FFFFFF;
+
+  text-decoration:none;
+
+  font-size:13.5px;
+
+  font-weight:900;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+#sise-explora .file-btn:hover{
+
+  background:var(--red-dark);
+
+  transform:translateY(-1px);
+}
+
+#sise-explora .arrow{
+
+  display:flex;
+
+  width:27px;
+  height:27px;
+
+  flex:0 0 27px;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.18);
+}
+
+
+/* ======================================================
+   CIERRE
+====================================================== */
+
+#sise-explora .closing{
+
+  margin-top:28px;
+
+  padding:20px 22px;
+
+  border:1px solid #F7D4E0;
+
+  border-left:6px solid var(--red);
+
+  border-radius:10px;
+
+  background:var(--soft);
+}
+
+#sise-explora .closing strong{
+
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--red);
+
+  font-size:17px;
+}
+
+#sise-explora .closing p{
+
+  margin:0;
+
+  color:#4D4648;
+
+  font-size:14.5px;
+
+  line-height:1.62;
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:850px){
+
+  #sise-explora .grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:560px){
+
+  #sise-explora .hero{
+    padding:28px 22px;
+  }
+
+  #sise-explora .section-heading{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  #sise-explora .intro{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main id="sise-explora">
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      Recursos complementarios
+    </div>
+
+
+    <h1>
+      Explora y
+      <span>profundiza</span>
+    </h1>
+
+
+    <p>
+      Consulta estos recursos institucionales para profundizar
+      en el diseño de evaluaciones auténticas y en el uso
+      ético, responsable y transparente de la Inteligencia Artificial
+      en los procesos de enseñanza, aprendizaje y evaluación.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+====================================================== -->
+
+<section class="intro">
+
+  <div class="intro-icon">
+    i
+  </div>
+
+
+  <div>
+
+    <strong>
+      Recursos para consultar y conservar
+    </strong>
+
+
+    <p>
+      Selecciona el material que necesites.
+      El recurso en PDF puede abrirse para su consulta.
+      Los documentos editables se descargan para que puedas
+      conservarlos y utilizarlos posteriormente cuando corresponda.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     ENCABEZADO
+====================================================== -->
+
+<section class="section-heading">
+
+  <div>
+
+    <span class="section-label">
+      Material institucional
+    </span>
+
+    <h2>
+      Recursos disponibles
+    </h2>
+
+  </div>
+
+
+  <div class="counter">
+    4 recursos
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     GRID
+====================================================== -->
+
+<section class="grid">
+
+
+<!-- =====================================================
+     RECURSO 01
+===================================================== -->
+
+<article class="card">
+
+  <div class="visual">
+
+    <div class="resource-number">
+      Recurso 01
+    </div>
+
+
+    <div class="icon">
+      IA
+    </div>
+
+  </div>
+
+
+  <div class="card-body">
+
+    <div class="type">
+      Asistente · PDF
+    </div>
+
+
+    <h3>
+      Asistente IA: Diseño de Evaluaciones Auténticas y por Competencias
+    </h3>
+
+
+    <p class="description">
+      Accede al recurso institucional que presenta el Asistente IA
+      para apoyar el diseño de evaluaciones significativas,
+      contextualizadas y orientadas al desarrollo de competencias.
+    </p>
+
+
+    <div class="tags">
+
+      <span class="tag">
+        Evaluaciones auténticas
+      </span>
+
+      <span class="tag">
+        Competencias
+      </span>
+
+      <span class="tag">
+        Asistente IA
+      </span>
+
+    </div>
+
+
+    <!-- PDF: abrir -->
+
+    <a
+      class="file-btn"
+      href="ASISTE~1.PDF"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <span>
+        Abrir recurso
+      </span>
+
+      <span class="arrow">
+        →
+      </span>
+
+    </a>
+
+  </div>
+
+</article>
+
+
+<!-- =====================================================
+     RECURSO 02
+===================================================== -->
+
+<article class="card">
+
+  <div class="visual">
+
+    <div class="resource-number">
+      Recurso 02
+    </div>
+
+
+    <div class="icon">
+      ✓
+    </div>
+
+  </div>
+
+
+  <div class="card-body">
+
+    <div class="type">
+      Formato editable · DOC
+    </div>
+
+
+    <h3>
+      Declaración jurada sobre el uso ético de Inteligencia Artificial
+    </h3>
+
+
+    <p class="description">
+      Formato para declarar de manera transparente
+      el uso de herramientas de Inteligencia Artificial
+      en trabajos académicos, registrar los apoyos utilizados
+      y mantener la autoría y la integridad académica.
+    </p>
+
+
+    <div class="tags">
+
+      <span class="tag">
+        Declaración
+      </span>
+
+      <span class="tag">
+        Transparencia
+      </span>
+
+      <span class="tag">
+        Integridad académica
+      </span>
+
+    </div>
+
+
+    <!-- DOC: descargar -->
+
+    <a
+      class="file-btn"
+      href="DECLAR~1.DOC"
+      download>
+
+      <span>
+        Descargar formato
+      </span>
+
+      <span class="arrow">
+        ↓
+      </span>
+
+    </a>
+
+  </div>
+
+</article>
+
+
+<!-- =====================================================
+     RECURSO 03
+===================================================== -->
+
+<article class="card">
+
+  <div class="visual">
+
+    <div class="resource-number">
+      Recurso 03
+    </div>
+
+
+    <div class="icon">
+      E
+    </div>
+
+  </div>
+
+
+  <div class="card-body">
+
+    <div class="type">
+      Lineamiento institucional · DOCX
+    </div>
+
+
+    <h3>
+      Uso de Inteligencia Artificial para estudiantes
+    </h3>
+
+
+    <p class="description">
+      Lineamiento institucional DA-IE-01 que orienta
+      el uso responsable, ético y transparente de la IA
+      por parte de los estudiantes, considerando transparencia,
+      integridad académica, privacidad, verificación
+      y responsabilidad sobre el trabajo presentado.
+    </p>
+
+
+    <div class="tags">
+
+      <span class="tag">
+        Estudiantes
+      </span>
+
+      <span class="tag">
+        Uso responsable
+      </span>
+
+      <span class="tag">
+        DA-IE-01
+      </span>
+
+    </div>
+
+
+    <!-- DOCX: descargar -->
+
+    <a
+      class="file-btn"
+      href="LINEAMIENTO DE USO DE INTELIGENCIA ARTIFICIAL - ESTUDIANTES (3).docx"
+      download>
+
+      <span>
+        Descargar lineamiento
+      </span>
+
+      <span class="arrow">
+        ↓
+      </span>
+
+    </a>
+
+  </div>
+
+</article>
+
+
+<!-- =====================================================
+     RECURSO 04
+===================================================== -->
+
+<article class="card">
+
+  <div class="visual">
+
+    <div class="resource-number">
+      Recurso 04
+    </div>
+
+
+    <div class="icon">
+      D
+    </div>
+
+  </div>
+
+
+  <div class="card-body">
+
+    <div class="type">
+      Lineamiento institucional · DOCX
+    </div>
+
+
+    <h3>
+      Uso de Inteligencia Artificial para docentes
+    </h3>
+
+
+    <p class="description">
+      Lineamiento institucional DA-IE-02 para orientar
+      el uso pedagógico, responsable y transparente de IA
+      en la práctica docente, manteniendo el juicio profesional,
+      la verificación de información y la responsabilidad
+      sobre las decisiones académicas y evaluativas.
+    </p>
+
+
+    <div class="tags">
+
+      <span class="tag">
+        Docentes
+      </span>
+
+      <span class="tag">
+        Juicio humano
+      </span>
+
+      <span class="tag">
+        DA-IE-02
+      </span>
+
+    </div>
+
+
+    <!-- DOCX: descargar -->
+
+    <a
+      class="file-btn"
+      href="LINEAMIENTO DE USO DE INTELIGENCIA ARTIFICIAL- DOCENTES (3).docx"
+      download>
+
+      <span>
+        Descargar lineamiento
+      </span>
+
+      <span class="arrow">
+        ↓
+      </span>
+
+    </a>
+
+  </div>
+
+</article>
+
+
+</section>
+
+
+<!-- ======================================================
+     CIERRE
+====================================================== -->
+
+<section class="closing">
+
+  <strong>
+    Consulta estos materiales cuando los necesites
+  </strong>
+
+
+  <p>
+    Estos recursos complementan el trabajo desarrollado durante
+    el curso y reúnen herramientas y orientaciones institucionales
+    para diseñar evaluaciones auténticas y promover un uso
+    responsable, transparente y ético de la Inteligencia Artificial.
+  </p>
+
+</section>
+
+
+</main>
+
+
+</body>
+</html>
